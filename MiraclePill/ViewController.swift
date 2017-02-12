@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var statePickerBtn: UIButton!
     
+    @IBOutlet weak var successIndicator: UIImageView!
+    
     let states = ["Ontario", "Alberta", "Manitoba", "British Columbia"];
     
     override func viewDidLoad() {
@@ -22,6 +24,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.delegate = self;
     }
 
+    @IBAction func buyNowPressed(_ sender: Any) {
+        self.successIndicator.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
