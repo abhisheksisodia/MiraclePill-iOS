@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" customClass="MainVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the-weekend-beauty-behind-the-madness" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-al-0An">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="PHF-a9-eFM"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cp-a0-XOX">
+                                <rect key="frame" x="0.0" y="164" width="375" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lAg-kw-uVd">
+                                        <rect key="frame" x="8" y="8" width="359" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-a7-t3G">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="0.80702298280423279" green="0.284994922942087" blue="0.73167860110988514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxt-zR-KP4">
+                                                <rect key="frame" x="119.5" y="0.0" width="120" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" red="0.073443700396825351" green="0.07214752374728392" blue="0.072886797634297687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjd-hA-Cji">
+                                                <rect key="frame" x="239.5" y="0.0" width="119.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" red="0.061847422030309886" green="0.071087839130931391" blue="0.073443700396825351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79200545153259672" green="0.80702298280423279" blue="0.786667747675454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lAg-kw-uVd" firstAttribute="top" secondItem="5Cp-a0-XOX" secondAttribute="top" constant="8" id="JDi-RP-8y6"/>
+                                    <constraint firstItem="lAg-kw-uVd" firstAttribute="leading" secondItem="5Cp-a0-XOX" secondAttribute="leading" constant="8" id="LNe-up-G64"/>
+                                    <constraint firstAttribute="height" constant="46" id="Mi6-yg-gYB"/>
+                                    <constraint firstAttribute="trailing" secondItem="lAg-kw-uVd" secondAttribute="trailing" constant="8" id="f3q-IT-PzV"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x1n-sX-yB1">
+                                <rect key="frame" x="0.0" y="209" width="375" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="Tzt-bS-phv">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tzt-bS-phv" id="7oZ-Ic-wd7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="the-weekend-beauty-behind-the-madness" translatesAutoresizingMaskIntoConstraints="NO" id="lue-EY-aL6">
+                                                    <rect key="frame" x="15" y="0.0" width="85" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="78" id="N1r-h2-Zas"/>
+                                                        <constraint firstAttribute="width" constant="79" id="ULL-eW-fq2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starboy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-6S-kii">
+                                                    <rect key="frame" x="108" y="13" width="223" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="223" id="7EF-jZ-9nC"/>
+                                                        <constraint firstAttribute="height" constant="66" id="PT6-di-Xif"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="46"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d2I-6S-kii" firstAttribute="centerY" secondItem="7oZ-Ic-wd7" secondAttribute="centerY" id="FLG-he-kIh"/>
+                                                <constraint firstItem="lue-EY-aL6" firstAttribute="leading" secondItem="7oZ-Ic-wd7" secondAttribute="leading" constant="8" id="aFb-H4-fir"/>
+                                                <constraint firstItem="lue-EY-aL6" firstAttribute="centerY" secondItem="7oZ-Ic-wd7" secondAttribute="centerY" constant="-7" id="lEb-em-Wab"/>
+                                                <constraint firstItem="d2I-6S-kii" firstAttribute="leading" secondItem="lue-EY-aL6" secondAttribute="trailing" constant="21" id="urJ-yv-bRN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Cp-a0-XOX" firstAttribute="top" secondItem="PlO-al-0An" secondAttribute="bottom" id="ARY-7p-AYN"/>
+                            <constraint firstItem="x1n-sX-yB1" firstAttribute="top" secondItem="PlO-al-0An" secondAttribute="bottom" constant="45" id="ICY-IB-r9u"/>
+                            <constraint firstAttribute="trailing" secondItem="5Cp-a0-XOX" secondAttribute="trailing" id="NdG-9N-Exk"/>
+                            <constraint firstItem="PlO-al-0An" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="RVz-qJ-S4b"/>
+                            <constraint firstItem="5Cp-a0-XOX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eBG-IJ-dDf"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="x1n-sX-yB1" secondAttribute="bottom" id="hxI-M9-S30"/>
+                            <constraint firstAttribute="trailing" secondItem="PlO-al-0An" secondAttribute="trailing" id="r6E-Wc-gVO"/>
+                            <constraint firstItem="x1n-sX-yB1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tzG-LB-RsN"/>
+                            <constraint firstItem="PlO-al-0An" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vwY-wH-1ng"/>
+                            <constraint firstAttribute="trailing" secondItem="x1n-sX-yB1" secondAttribute="trailing" id="wYJ-Wk-bio"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="UH1-Pb-3n8" kind="showDetail" identifier="VideoVC" id="tFv-0k-kAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="3pP-Ah-bnq">
+            <objects>
+                <viewController id="UH1-Pb-3n8" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dx1-4g-Tdh"/>
+                        <viewControllerLayoutGuide type="bottom" id="aQl-yi-p1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ig-fX-cMY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AlV-o5-mOS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVF-5S-JrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="the-weekend-beauty-behind-the-madness" width="1170" height="530"/>
+    </resources>
+</document>
