@@ -1,26 +1,166 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--MainVC-->
+        <scene sceneID="adY-8U-Avm">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="acS-TQ-8vH" customClass="MainVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uow-Sf-vVQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nvt-sW-Hz5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Doh-9R-N6g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the-weekend-beauty-behind-the-madness" translatesAutoresizingMaskIntoConstraints="NO" id="vls-Me-CBj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="Mqe-J0-ByL"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUm-kK-lcd">
+                                <rect key="frame" x="0.0" y="164" width="375" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kjb-yw-E2L">
+                                        <rect key="frame" x="8" y="8" width="359" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSF-t5-kvj">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="0.80702298279999996" green="0.2849949229" blue="0.73167860110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U27-yf-RvK">
+                                                <rect key="frame" x="120" y="0.0" width="119" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" red="0.073443700400000006" green="0.072147523749999998" blue="0.07288679763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPr-yP-NR0">
+                                                <rect key="frame" x="239" y="0.0" width="120" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" red="0.061847422030000002" green="0.071087839129999997" blue="0.073443700400000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79200545150000001" green="0.80702298279999996" blue="0.78666774770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Kjb-yw-E2L" firstAttribute="top" secondItem="lUm-kK-lcd" secondAttribute="top" constant="8" id="BS8-VJ-ZaU"/>
+                                    <constraint firstAttribute="height" constant="46" id="HfF-Yn-EcS"/>
+                                    <constraint firstItem="Kjb-yw-E2L" firstAttribute="leading" secondItem="lUm-kK-lcd" secondAttribute="leading" constant="8" id="gvx-rn-8VD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kjb-yw-E2L" secondAttribute="trailing" constant="8" id="pvZ-G6-GEZ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JiL-l2-2mX">
+                                <rect key="frame" x="0.0" y="209" width="375" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="K3e-Q5-H2o" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K3e-Q5-H2o" id="eMQ-a8-6Fn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="the-weekend-beauty-behind-the-madness" translatesAutoresizingMaskIntoConstraints="NO" id="p5p-OO-W26">
+                                                    <rect key="frame" x="15" y="0.0" width="85" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="78" id="IAu-re-IbT"/>
+                                                        <constraint firstAttribute="width" constant="79" id="L1f-gK-cxb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starboy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-hq-oHn">
+                                                    <rect key="frame" x="108" y="13" width="223" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="66" id="MpV-Le-Dy7"/>
+                                                        <constraint firstAttribute="width" constant="223" id="k03-vE-9NB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="46"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RvK-hq-oHn" firstAttribute="centerY" secondItem="eMQ-a8-6Fn" secondAttribute="centerY" id="JbH-8x-LHh"/>
+                                                <constraint firstItem="p5p-OO-W26" firstAttribute="leading" secondItem="eMQ-a8-6Fn" secondAttribute="leading" constant="8" id="K5q-nD-zXM"/>
+                                                <constraint firstItem="RvK-hq-oHn" firstAttribute="leading" secondItem="p5p-OO-W26" secondAttribute="trailing" constant="21" id="VUQ-CI-A51"/>
+                                                <constraint firstItem="p5p-OO-W26" firstAttribute="centerY" secondItem="eMQ-a8-6Fn" secondAttribute="centerY" constant="-7" id="fNQ-sA-6TW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="p5p-OO-W26" id="kKE-2T-ssX"/>
+                                            <outlet property="videoTitle" destination="RvK-hq-oHn" id="GUg-sP-klz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vls-Me-CBj" firstAttribute="leading" secondItem="Doh-9R-N6g" secondAttribute="leading" id="EUg-Ni-fH8"/>
+                            <constraint firstItem="JiL-l2-2mX" firstAttribute="top" secondItem="vls-Me-CBj" secondAttribute="bottom" constant="45" id="M9U-zg-HYv"/>
+                            <constraint firstAttribute="trailing" secondItem="JiL-l2-2mX" secondAttribute="trailing" id="QSP-5o-SCl"/>
+                            <constraint firstItem="lUm-kK-lcd" firstAttribute="top" secondItem="vls-Me-CBj" secondAttribute="bottom" id="S3G-c6-4VP"/>
+                            <constraint firstAttribute="trailing" secondItem="lUm-kK-lcd" secondAttribute="trailing" id="VpB-X2-JRt"/>
+                            <constraint firstItem="Nvt-sW-Hz5" firstAttribute="top" secondItem="JiL-l2-2mX" secondAttribute="bottom" id="X2g-PP-2lL"/>
+                            <constraint firstItem="lUm-kK-lcd" firstAttribute="leading" secondItem="Doh-9R-N6g" secondAttribute="leading" id="d3w-kZ-AHB"/>
+                            <constraint firstItem="JiL-l2-2mX" firstAttribute="leading" secondItem="Doh-9R-N6g" secondAttribute="leading" id="dR2-Uf-UKC"/>
+                            <constraint firstItem="vls-Me-CBj" firstAttribute="top" secondItem="Doh-9R-N6g" secondAttribute="top" id="s3W-hP-fN6"/>
+                            <constraint firstAttribute="trailing" secondItem="vls-Me-CBj" secondAttribute="trailing" id="sn2-BO-UWX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JiL-l2-2mX" id="G4V-N1-qlQ"/>
+                        <segue destination="PB3-wU-e2s" kind="showDetail" identifier="VideoVC" id="ltM-Pi-NuO">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0J-Cn-tG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="bM6-Vp-atA">
+            <objects>
+                <viewController id="PB3-wU-e2s" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLM-eh-R9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZN-kF-zBI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0C0-GN-hLe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIF-yZ-Wxk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HL2-h5-Tsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="the-weekend-beauty-behind-the-madness" width="1170" height="530"/>
+    </resources>
 </document>
