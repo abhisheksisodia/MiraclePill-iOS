@@ -1,34 +1,19 @@
 //
 //  VideoVC.swift
-//  PartyRockApp
+//  WeekndRock
 //
-//  Created by Abhishek Sisodia on 2017-03-05.
+//  Created by Abhishek Sisodia on 2017-03-06.
 //  Copyright © 2017 Abhishek Sisodia. All rights reserved.
 //
 
 import UIKit
 
 class VideoVC: UIViewController {
-    
-    @IBOutlet weak var webView: UIWebView!
-    
-    @IBOutlet weak var titleLbl: UILabel!
-    
-    private var _videoInfo: VideoInfo!
-    
-    var videoInfo: VideoInfo {
-        get {
-            return _videoInfo
-        } set {
-            _videoInfo = newValue
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLbl.text = videoInfo.videoTitle
-        webView.loadHTMLString(videoInfo.videoURL, baseURL: nil)
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
