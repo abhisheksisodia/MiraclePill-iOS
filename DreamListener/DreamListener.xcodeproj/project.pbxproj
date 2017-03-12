@@ -22,6 +22,7 @@
 		3ACB609F1E74EBA70094DFC3 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB60971E74EBA70094DFC3 /* ItemType+CoreDataClass.swift */; };
 		3ACB60A01E74EBA70094DFC3 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB60981E74EBA70094DFC3 /* ItemType+CoreDataProperties.swift */; };
 		3ACB60A51E74FCCB0094DFC3 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB60A41E74FCCB0094DFC3 /* MaterialView.swift */; };
+		3ACB60A71E75015C0094DFC3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB60A61E75015C0094DFC3 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3ACB60971E74EBA70094DFC3 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3ACB60981E74EBA70094DFC3 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ACB60A41E74FCCB0094DFC3 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		3ACB60A61E75015C0094DFC3 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACB60A41E74FCCB0094DFC3 /* MaterialView.swift */,
+				3ACB60A61E75015C0094DFC3 /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACB60A71E75015C0094DFC3 /* ItemCell.swift in Sources */,
 				3ACB609E1E74EBA70094DFC3 /* Image+CoreDataProperties.swift in Sources */,
 				3ACB60851E74E8460094DFC3 /* DreamListener.xcdatamodeld in Sources */,
 				3ACB609F1E74EBA70094DFC3 /* ItemType+CoreDataClass.swift in Sources */,
