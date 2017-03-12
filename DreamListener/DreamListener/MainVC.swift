@@ -1,14 +1,14 @@
 //
 //  ViewController.swift
-//  WeekndRock
+//  DreamListener
 //
-//  Created by Abhishek Sisodia on 2017-03-06.
+//  Created by Abhishek Sisodia on 2017-03-11.
 //  Copyright © 2017 Abhishek Sisodia. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
