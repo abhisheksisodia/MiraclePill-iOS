@@ -18,6 +18,8 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     var stores = [Store]()
     
+    var itemToEdit: Item?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +46,11 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
 //        ad.saveContext()
         
         getStores()
+        
+        if itemToEdit != nil {
+            
+            loadItemData()
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -78,7 +85,17 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBAction func savePressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+        
+        if itemToEdit != nil {
+            
+            item = itemToEdit
+            
+        } else {
+            
+            item = Item(context: context)
+            
+        }
         
         if let title = titleView.text {
             
@@ -103,6 +120,32 @@ class ItemDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            
+            titleView.text = item.title
+            priceView.text = "\(item.price)"
+            detailsView.text = item.details
+            
+            if let store = item.toStore {
+                
+                var index = 0
+                repeat {
+                    
+                    let s = stores[index]
+                    if s.name == store.name {
+                        
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                    
+                } while (index < stores.count)
+            }
+        }
     }
     
 }
