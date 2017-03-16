@@ -33,6 +33,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="t8G-UG-GBj"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="39V-BJ-kqe">
                                 <rect key="frame" x="16" y="108" width="343" height="559"/>
@@ -159,15 +162,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="puD-SZ-PVw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="puD-SZ-PVw">
                                 <rect key="frame" x="16" y="72" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="tL9-ui-uyA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doU-N7-GGh">
-                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-TB-7mJ" customClass="CustomTextField" customModule="DreamListener" customModuleProvider="target">
                                 <rect key="frame" x="124" y="82" width="235" height="44"/>
                                 <color key="backgroundColor" red="0.85576546034484946" green="0.85576546034484946" blue="0.85576546034484946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -235,6 +235,16 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doU-N7-GGh">
+                                <rect key="frame" x="51" y="107" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HB4-Hf-KFB"/>
+                                    <constraint firstAttribute="width" constant="30" id="mWV-4J-wX5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="ua0-gU-i71" eventType="touchUpInside" id="bdM-Ze-Hja"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,6 +252,7 @@
                             <constraint firstItem="w2o-TB-7mJ" firstAttribute="trailing" secondItem="KBz-eD-9Jl" secondAttribute="trailingMargin" id="2Qr-ev-3mD"/>
                             <constraint firstItem="OGd-NM-pBH" firstAttribute="trailing" secondItem="KBz-eD-9Jl" secondAttribute="trailingMargin" id="3MR-ga-2Vq"/>
                             <constraint firstItem="U7f-Ym-ABC" firstAttribute="top" secondItem="w2o-TB-7mJ" secondAttribute="bottom" constant="8" id="3Or-dj-MXC"/>
+                            <constraint firstItem="doU-N7-GGh" firstAttribute="centerY" secondItem="puD-SZ-PVw" secondAttribute="centerY" id="4fG-Bf-rFN"/>
                             <constraint firstItem="ts1-92-vqH" firstAttribute="top" secondItem="OGd-NM-pBH" secondAttribute="bottom" constant="20" id="5XI-Ba-uyI"/>
                             <constraint firstItem="U7f-Ym-ABC" firstAttribute="leading" secondItem="puD-SZ-PVw" secondAttribute="trailing" constant="8" id="5tq-53-xOr"/>
                             <constraint firstItem="PBg-b0-eq7" firstAttribute="trailing" secondItem="KBz-eD-9Jl" secondAttribute="trailingMargin" id="74d-Gh-s7s"/>
@@ -250,10 +261,9 @@
                             <constraint firstItem="PBg-b0-eq7" firstAttribute="top" secondItem="U7f-Ym-ABC" secondAttribute="bottom" constant="8" id="LpE-M7-WDZ"/>
                             <constraint firstItem="puD-SZ-PVw" firstAttribute="top" secondItem="pbV-PS-bgR" secondAttribute="bottom" constant="8" id="Ryp-c4-I2H"/>
                             <constraint firstItem="5dn-IW-EbB" firstAttribute="centerX" secondItem="KBz-eD-9Jl" secondAttribute="centerX" id="Zf4-L5-AWd"/>
-                            <constraint firstItem="doU-N7-GGh" firstAttribute="centerX" secondItem="KBz-eD-9Jl" secondAttribute="centerX" id="bde-1f-Vfh"/>
                             <constraint firstItem="pRI-Fu-TVz" firstAttribute="top" secondItem="5dn-IW-EbB" secondAttribute="bottom" constant="8" id="dcf-LL-ThB"/>
-                            <constraint firstItem="doU-N7-GGh" firstAttribute="centerY" secondItem="KBz-eD-9Jl" secondAttribute="centerY" id="fhw-DE-tey"/>
                             <constraint firstItem="w2o-TB-7mJ" firstAttribute="top" secondItem="pbV-PS-bgR" secondAttribute="bottom" constant="18" id="gSf-fC-DLi"/>
+                            <constraint firstItem="doU-N7-GGh" firstAttribute="centerX" secondItem="puD-SZ-PVw" secondAttribute="centerX" id="iX4-i3-Ofb"/>
                             <constraint firstItem="w2o-TB-7mJ" firstAttribute="leading" secondItem="puD-SZ-PVw" secondAttribute="trailing" constant="8" id="kRb-HK-ZSG"/>
                             <constraint firstAttribute="trailing" secondItem="pRI-Fu-TVz" secondAttribute="trailing" id="nku-dJ-EQF"/>
                             <constraint firstItem="OGd-NM-pBH" firstAttribute="leading" secondItem="KBz-eD-9Jl" secondAttribute="leadingMargin" id="p2q-zt-J3C"/>
@@ -264,12 +274,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="FiU-9s-vJ2">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="yI9-DV-u08">
                             <color key="tintColor" red="0.85576546034484946" green="0.21308184870533853" blue="0.15949979182146506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="ua0-gU-i71" id="GKz-w4-95C"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsView" destination="PBg-b0-eq7" id="x4f-AU-f9z"/>
                         <outlet property="priceView" destination="U7f-Ym-ABC" id="yns-TL-LdW"/>
                         <outlet property="storePicker" destination="pRI-Fu-TVz" id="Ulu-vQ-Qrl"/>
+                        <outlet property="thumbImage" destination="puD-SZ-PVw" id="J89-ls-NPT"/>
                         <outlet property="titleView" destination="w2o-TB-7mJ" id="1QA-km-T4R"/>
                     </connections>
                 </viewController>
